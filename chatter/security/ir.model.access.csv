@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_mail_activity_attachments,mail.activity.attachments,model_mail_activity_attachments,,1,1,1,1
+access_mail_activity_attachments_files,mail.activity.attachments.files,model_mail_activity_attachments_files,,1,1,1,1

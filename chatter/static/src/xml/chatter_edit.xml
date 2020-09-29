@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates>
+    <t t-extend="mail.widget.Thread.Message">
+        <t t-if="!message.isEmpty()" t-jquery="div.o_thread_message_content" t-operation="after">
+            <t t-if="options.is_admin or options.is_system">
+                <div class="text-right">
+                    <t t-if="message._id and message.getCurrentUser()">
+                        <i>Last Edited by :</i>
+                        <t t-esc="message.getCurrentUser()"/>
+                    </t>
+                    <t t-if="message._id">
+                        <i class="chatter_edit fa fa-pencil mr-4" t-att-data-message-id="message.getID()"/>
+                        <i class="chatter_delete fa fa-trash" t-att-data-message-id="message.getID()"/>
+                    </t>
+                </div>
+            </t>
+        </t>
+    </t>
+
+    <t t-extend="mail.chatter.Buttons">
+        <t t-jquery="button.o_chatter_button_new_message" t-operation="replace">
+            <button t-if="newMessageButton and !is_message_to_customer" type="button" class="btn btn-link o_chatter_button_new_message"
+                    title="Send a message" disabled="disabled">
+                Send message
+            </button>
+        </t>
+    </t>
+</templates>

@@ -1,0 +1,39 @@
+<odoo>
+    <data>
+        <!--        Mail Activity : Attachment view -->
+        <record id="view_mail_activity_attachment_form2" model="ir.ui.view">
+            <field name="name">mail.activity.attachment.form2</field>
+            <field name="model">mail.activity.attachments</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="notes" placeholder="Add Activity Notes"/>
+                            <field name="files" filename="filename"/>
+                            <field name="filename" invisible="1"/>
+                            <field name="res_id" invisible="1"/>
+                            <field name="res_model" invisible="1"/>
+                            <field name="res_activity_id" invisible="1"/>
+                        </group>
+                        <field name="related_files_id" readonly="1" force_save="1">
+                            <tree >
+                                <field name="file" filename="filename"/>
+                                <field name="filename" />
+                            </tree>
+                        </field>
+
+                    </sheet>
+                    <footer>
+                        <button name="action_add_attachment"
+                                type="object"
+                                class="oe_highlight"
+                                string="Add"/>
+                        OR
+                        <button string="Close" class="oe_highlight" special="cancel"/>
+
+                    </footer>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>
