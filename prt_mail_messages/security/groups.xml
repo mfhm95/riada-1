@@ -21,7 +21,7 @@
 
         <!-- Delete messages -->
         <record id="group_own_delete" model="res.groups">
-            <field name="name">Delete own messages</field>
+            <field name="name">Delete own messages Prt</field>
             <field name="comment">Delete own messages (must have DELETE access to record!)</field>
             <field name="category_id" ref="module_messages_easy_category_delete"/>
         </record>
