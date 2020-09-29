@@ -25,7 +25,7 @@
   "description"          :  """Add CC and BCC feature in mail,
     Email CC, Email Bcc, mail features, Email cc feature, Email Bcc features, Email CC IDs, Email BCC IDs""",
   "live_test_url"        :  "http://odoodemo.webkul.com/?module=odoo_email_cc_bcc&version=13.0",
-  "depends"              :  ['mail'],
+  "depends"              :  ['mail',],
   "data"                 :  [
                              'views/compose_view.xml',
                              'views/templates.xml',
