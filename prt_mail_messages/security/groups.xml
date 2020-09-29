@@ -20,7 +20,7 @@
         </record>
 
         <!-- Delete messages -->
-        <record id="group_delete" model="res.groups">
+        <record id="group_own_delete" model="res.groups">
             <field name="name">Delete own messages</field>
             <field name="comment">Delete own messages (must have DELETE access to record!)</field>
             <field name="category_id" ref="module_messages_easy_category_delete"/>
@@ -31,7 +31,7 @@
             <field name="name">Delete any message</field>
             <field name="comment">Delete any message (must have DELETE access to record!)</field>
             <field name="category_id" ref="module_messages_easy_category_delete"/>
-            <field name="implied_ids" eval="[(4, ref('group_delete'))]"/>
+            <field name="implied_ids" eval="[(4, ref('group_own_delete'))]"/>
         </record>
 
         <!-- ===============================-->
